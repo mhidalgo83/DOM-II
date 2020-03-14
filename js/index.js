@@ -50,21 +50,32 @@ canalImg.addEventListener("drag", e => {
 
 //Resize
 const boatImg = document.querySelector(".content-destination img");
-window.addEventListener("resize", ()=> {
-  boatImg.src = "https://images.unsplash.com/photo-1540946485063-a40da27545f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+window.addEventListener("resize", () => {
+  boatImg.src =
+    "https://images.unsplash.com/photo-1540946485063-a40da27545f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80";
 });
 
 //Mouseover
 const advAwtText = document.querySelector(".inverse-content .text-content h2");
 advAwtText.addEventListener("mouseover", e => {
-    e.target.style.fontSize = "5rem"
-})
+  e.target.style.fontSize = "5rem";
+});
 
 //stopPropagation
-const intro = document.querySelector(".intro");
-intro.addEventListener("click", e => {
-    e.target.style.background = "sienna";
-})
+const firstSectionP = document.querySelector(
+  ".content-section .text-content p"
+);
+console.log(firstSectionP);
+firstSectionP.addEventListener("click", e => {
+  event.stopPropagation();
+  e.target.style.background = "dodgerblue";
+});
+
+const firstSection = document.querySelector(".content-section .text-content");
+console.log(firstSection);
+firstSection.addEventListener("click", e => {
+  e.target.style.background = "sienna";
+});
 
 //preventDefault()
 const links = document.querySelectorAll("a");
