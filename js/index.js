@@ -60,6 +60,12 @@ advAwtText.addEventListener("mouseover", e => {
     e.target.style.fontSize = "5rem"
 })
 
+//stopPropagation
+const intro = document.querySelector(".intro");
+intro.addEventListener("click", e => {
+    e.target.style.background = "sienna";
+})
+
 //preventDefault()
 const links = document.querySelectorAll("a");
 links.forEach(link => {
